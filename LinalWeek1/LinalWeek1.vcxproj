@@ -157,11 +157,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="game.h" />
     <ClInclude Include="matrix.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="LinalWeek1.cpp" />
     <ClCompile Include="matrix.cpp" />
     <ClCompile Include="pch.cpp">
