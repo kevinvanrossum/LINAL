@@ -3,21 +3,31 @@
 #include <iostream>
 
 
-vector::vector(const int x, const int y): x_(x), y_(y)
+vector::vector(const double x, const double y): x_(x), y_(y)
 {
 }
 
-int vector::get_x() const
+double vector::get_x() const
 {
 	return x_;
 }
 
-int vector::get_y() const
+double vector::get_y() const
 {
 	return y_;
 }
 
-void vector::multiply_by_scalar(const int scalar)
+void vector::set_x(double x)
+{
+	x_ = x;
+}
+
+void vector::set_y(double y)
+{
+	y_ = y;
+}
+
+void vector::multiply_by_scalar(const double scalar)
 {
 	x_ = scalar * x_;
 	y_ = scalar * y_;
@@ -40,7 +50,7 @@ std::string vector::get_notation() const
 	return std::string("[") + std::to_string(get_x()) + std::string(",") + std::to_string(get_y()) + std::string("]");
 }
 
-int vector::get_length() const
+double vector::get_length() const
 {
 	return sqrt(x_ * x_ + y_ * y_);
 }

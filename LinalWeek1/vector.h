@@ -4,18 +4,20 @@
 class vector
 {
 public:
-	vector(int x, int y);
+	vector(double x, double y);
 	~vector() = default;
-	int get_x() const;
-	int get_y() const;
-	void multiply_by_scalar(int scalar);
+	double get_x() const;
+	double get_y() const;
+	void set_x(double x);
+	void set_y(double y);
+	void multiply_by_scalar(double scalar);
 	void add_vector(vector vector);
 	void subtract_vector(vector vector);
 	std::string  get_notation() const;
-	int get_length() const;
+	double get_length() const;
 
 private:
-	int x_;
-	int y_;
+	double x_;
+	double y_;
 };
 
